@@ -10,7 +10,17 @@
  * control, so do not include passwords or other sensitive information in this
  * file.
  */
-
 return array(
-    // ...
-);
+    'doctrine' => array(
+        'connection' => array(
+            'orm_default' => array(
+                'driverClass' => 'Doctrine\DBAL\Driver\PDOMySql\Driver',
+                    'params' => array(
+                        'host' => 'localhost',
+                        'port' => '3306',
+                        'dbname' => 'infacw',
+                ),
+            ),
+        )
+));
+

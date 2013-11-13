@@ -1,0 +1,20 @@
+<?php
+$form = $this->form;
+/*$form->setAttribute('action', $this->url(
+    'Application/IndexController',
+    array(
+        'action'     => 'add',
+        'controller' => 'IndexController'
+    )
+));*/
+$form->setAttributes(array(
+    'action' => $this->url.'/application/index/add',
+    'method' => 'post'
+));
+$form->prepare();
+ 
+echo $this->form()->openTag($form);
+echo $this->formCollection($form);
+echo $this->form()->closeTag();
+
+?>
